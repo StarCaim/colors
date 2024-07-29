@@ -1,1 +1,1 @@
-export const themes = ['light', 'dark', 'synthwave', 'cyberpunk'];
+export const themes = ['system', 'light', 'dark', 'synthwave', 'cyberpunk'];

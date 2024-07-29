@@ -12,8 +12,8 @@
 				document.documentElement.setAttribute('data-theme', theme);
 				currentTheme = theme;
 			} else {
-				document.documentElement.setAttribute('data-theme', 'light');
-				currentTheme = 'light';
+				document.documentElement.setAttribute('data-theme', 'system');
+				currentTheme = 'system';
 			}
 		}
 	});
