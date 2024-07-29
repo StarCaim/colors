@@ -36,7 +36,7 @@
 	<div class="flex p-4 justify-end">
 		<select
 			data-choose-theme
-			class="select select-bordered select-md capitalize w-24 bg-base-200"
+			class="select select-bordered select-md capitalize w-full max-w-32 bg-base-200"
 			on:change={setTheme}
 			bind:value={currentTheme}
 		>

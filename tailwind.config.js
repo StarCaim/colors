@@ -4,7 +4,7 @@ import daisyui from 'daisyui';
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	daisyui: {
-		themes: false
+		themes: ['light', 'dark', 'synthwave', 'cyberpunk']
 	},
 	plugins: [daisyui]
 };
