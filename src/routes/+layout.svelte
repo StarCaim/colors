@@ -32,8 +32,8 @@
 	};
 </script>
 
-<div class="min-h-dvh flex flex-col">
-	<div class="flex p-4 justify-end">
+<div class="min-h-dvh h-dvh flex flex-col overflow-hidden p-4">
+	<div class="flex justify-end">
 		<select
 			data-choose-theme
 			class="select select-bordered select-md capitalize w-full max-w-32 bg-base-200"
