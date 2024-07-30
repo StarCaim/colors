@@ -17,7 +17,7 @@
 
 <div
 	style="background-color: #{color}"
-	class="w-full h-full flex flex-col justify-center lg:justify-end items-start lg:items-center px-16 lg:py-24"
+	class="w-full h-full flex flex-col justify-center lg:justify-end items-start lg:items-center px-16 lg:px-0 py-0 lg:py-24"
 >
 	<div class="uppercase text-4xl font-semibold {textColor}">
 		{color}
