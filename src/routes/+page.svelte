@@ -1,8 +1,38 @@
-<div class="flex-1 flex items-center justify-center">
-	<div class="bg-base-200 p-8 flex flex-col gap-4 items-center justify-center">
-		<h1 class="text-4xl text-base-content text-center">Coming Soon!</h1>
-		<p class="text-base-content text-center">
-			This page is under construction. Please check back later.
-		</p>
-	</div>
+<script lang="ts">
+	import ColorBlock from '$lib/components/ColorBlock.svelte';
+
+	const generateColor = () => {
+		return Math.random().toString(16).substring(2, 8);
+	};
+
+	let pallette: { color: string; locked: boolean }[] = [
+		{ color: generateColor(), locked: false },
+		{ color: generateColor(), locked: false },
+		{ color: generateColor(), locked: false },
+		{ color: generateColor(), locked: false },
+		{ color: generateColor(), locked: false }
+	];
+
+	const onKeyUp = (e: KeyboardEvent) => {
+		if (e.key === ' ' || e.key === 'Space') {
+			handleGenerateColor();
+		}
+	};
+
+	const handleGenerateColor = () => {
+		pallette = pallette.map((color) => {
+			if (!color.locked) {
+				color.color = generateColor();
+			}
+			return color;
+		});
+	};
+</script>
+
+<div class="flex-1 flex flex-col lg:flex-row items-center justify-center">
+	{#each pallette as { color }}
+		<ColorBlock {color} />
+	{/each}
 </div>
+
+<svelte:window on:keyup={onKeyUp} />
